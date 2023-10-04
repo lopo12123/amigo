@@ -1,3 +1,3 @@
-console.info('chrome-ext template-vue-ts background script')
+import {Logger} from "../utils/logger";
 
-export {}
+Logger.BACKGROUND.info('[background] started')
