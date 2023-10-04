@@ -16,7 +16,7 @@
     },
     "scripts": {
         "dev:crx": "vite",
-        "dev:tab": "vite --mode tab",
+        "dev:tab": "vite --mode tab --host",
         "build": "vue-tsc --noEmit && vite build",
         "preview": "vite preview"
     },
