@@ -15,7 +15,8 @@
         "node": ">=14.18.0"
     },
     "scripts": {
-        "dev": "vite",
+        "dev:crx": "vite",
+        "dev:tab": "vite --mode tab",
         "build": "vue-tsc --noEmit && vite build",
         "preview": "vite preview"
     },
