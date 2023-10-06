@@ -200,13 +200,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/chrome@npm:^0.0.236":
-  version: 0.0.236
-  resolution: "@types/chrome@npm:0.0.236"
+"@types/chrome@npm:^0.0.246":
+  version: 0.0.246
+  resolution: "@types/chrome@npm:0.0.246"
   dependencies:
     "@types/filesystem": "*"
     "@types/har-format": "*"
-  checksum: 64cc6f8ac5c23f5dc6a3e1137721dda52e6401b1e1a8f9d16bfca7236bd5a118be6746324fd9e33630d98863370137ff0749b9949ededb9f46accb187f333896
+  checksum: 6c6d92814b9838bbb1034d0cf731e53f8bb0090dc3e4a248c0e7c4c087fba305702ebf61b80858fec60f52858cb9ecf8148dbe9e94a20d742661085f31ee9cc7
   languageName: node
   linkType: hard
 
@@ -509,7 +509,7 @@ __metadata:
   resolution: "amigo@workspace:."
   dependencies:
     "@crxjs/vite-plugin": ^2.0.0-beta.19
-    "@types/chrome": ^0.0.236
+    "@types/chrome": ^0.0.246
     "@vitejs/plugin-vue": ^2.3.3
     element-plus: ^2.3.14
     pinia: ^2.1.6
