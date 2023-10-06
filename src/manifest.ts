@@ -15,8 +15,10 @@ export default defineManifest({
         newtab: 'index.html',
     },
     action: {
-        // default_popup: 'popup.html',
-        // default_icon: 'img/logo@48x48.png',
+        default_title: 'amigo',
+    },
+    side_panel: {
+        default_path: 'sidepanel.html'
     },
     background: {
         service_worker: 'src/background/index.ts',
@@ -28,11 +30,17 @@ export default defineManifest({
             js: ['src/content/index.ts'],
         },
     ],
+    content_security_policy: {
+        // see https://bugs.chromium.org/p/v8/issues/detail?id=7041, https://github.com/WebAssembly/content-security-policy/blob/master/proposals/CSP.md#the-wasm-unsafe-eval-source-directive
+        extension_pages: 'script-src \'wasm-unsafe-eval\'; object-src \'self\''
+    },
     web_accessible_resources: [
         {
-            resources: [],
+            resources: ['misc/web.wasm'],
             matches: ['<all_urls>'],
         },
     ],
-    permissions: [],
+    permissions: [
+        "sidePanel"
+    ],
 })
