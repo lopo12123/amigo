@@ -1,0 +1,22 @@
+{
+  "name": "rusty_crypto",
+  "collaborators": [
+    "lopo<lopo@zju.edu.cn>"
+  ],
+  "version": "0.1.0",
+  "license": "MIT",
+  "files": [
+    "rusty_crypto_bg.wasm",
+    "rusty_crypto.js",
+    "rusty_crypto.d.ts"
+  ],
+  "module": "rusty_crypto.js",
+  "types": "rusty_crypto.d.ts",
+  "sideEffects": false,
+  "keywords": [
+    "crypto",
+    "rusty",
+    "wasm",
+    "webassembly"
+  ]
+}
