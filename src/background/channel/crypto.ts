@@ -6,6 +6,6 @@ export const cryptoResolver: ChannelMessageResolver = (_origin, payload, sendRes
         const {encrypt, text} = payload
         sendResponse(encrypt ? V2.encode_base64(text) : V2.decode_base64(text))
     } catch (err) {
-        sendResponse()
+        sendResponse(err instanceof Error ? err.message : `${err}`)
     }
 }
