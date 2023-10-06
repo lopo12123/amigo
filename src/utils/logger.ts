@@ -1,7 +1,7 @@
 const SOURCE_COLOR = {
     BACKGROUND: '#9254de',
     NEWTABVIEW: '#36cfc9',
-    'POPUPVIEW-': '#ff7a45',
+    SIDE_PANEL: '#ff7a45',
 };
 
 // const LEVEL_COLOR = {
@@ -21,12 +21,12 @@ const LEVEL_STYLE = {
 class Logger {
     public static readonly BACKGROUND = new Logger('BACKGROUND');
     public static readonly NEWTABVIEW = new Logger('NEWTABVIEW');
-    public static readonly POPUPVIEW = new Logger('POPUPVIEW-');
+    public static readonly SIDE_PANEL = new Logger('SIDE_PANEL');
 
-    private readonly source: 'BACKGROUND' | 'NEWTABVIEW' | 'POPUPVIEW-';
+    private readonly source: 'BACKGROUND' | 'NEWTABVIEW' | 'SIDE_PANEL';
     private readonly source_style: string;
 
-    constructor(source: 'BACKGROUND' | 'NEWTABVIEW' | 'POPUPVIEW-') {
+    constructor(source: 'BACKGROUND' | 'NEWTABVIEW' | 'SIDE_PANEL') {
         this.source = source;
         this.source_style = `padding: 4px 8px; border-radius: 4px; background: ${SOURCE_COLOR[source]}; color: #fff;`
     }
