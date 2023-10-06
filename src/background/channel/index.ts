@@ -16,7 +16,7 @@ const channelMessageScheduler = (message: ChannelMessageCommon, _sender: chrome.
     return true
 }
 
-abstract class ChannelImpl {
+abstract class BackgroundChannelImpl {
     public static listen() {
         chrome.runtime.onMessage.addListener(channelMessageScheduler)
         logger.info('[messenger] listener added')
@@ -24,5 +24,5 @@ abstract class ChannelImpl {
 }
 
 export {
-    ChannelImpl
+    BackgroundChannelImpl
 }
