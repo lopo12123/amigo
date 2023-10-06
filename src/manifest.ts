@@ -27,10 +27,10 @@ export default defineManifest({
         type: 'module',
     },
     content_scripts: [
-        {
-            matches: ['http://*/*', 'https://*/*'],
-            js: ['src/content/index.ts'],
-        },
+        // {
+        //     matches: ['http://*/*', 'https://*/*'],
+        //     js: ['src/content/index.ts'],
+        // },
     ],
     content_security_policy: {
         // see https://bugs.chromium.org/p/v8/issues/detail?id=7041, https://github.com/WebAssembly/content-security-policy/blob/master/proposals/CSP.md#the-wasm-unsafe-eval-source-directive
