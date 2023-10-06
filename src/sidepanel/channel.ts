@@ -1,7 +1,7 @@
 import {CryptoChannelMessage} from "../declaration/channel";
 
 abstract class SidePanelChannelImpl {
-    public static encrypt(text: string) {
+    public static encrypt(text: string): Promise<string> {
         return chrome.runtime.sendMessage({
             channel: 'crypto',
             origin: 'sidepanel',
@@ -9,7 +9,7 @@ abstract class SidePanelChannelImpl {
         } as CryptoChannelMessage)
     }
 
-    public static decrypt(text: string) {
+    public static decrypt(text: string): Promise<string> {
         return chrome.runtime.sendMessage({
             channel: 'crypto',
             origin: 'sidepanel',
