@@ -5,15 +5,17 @@ export default defineManifest({
     description: '',
     version: '0.1.0',
     manifest_version: 3,
+    // see https://developer.chrome.com/docs/extensions/reference/sidePanel/
+    minimum_chrome_version: '114',
     icons: {
         16: 'icons/logo@16x16.png',
         32: 'icons/logo@32x32.png',
         48: 'icons/logo@48x48.png',
         128: 'icons/logo@128x128.png',
     },
-    chrome_url_overrides: {
-        newtab: 'index.html',
-    },
+    // chrome_url_overrides: {
+    //     newtab: 'index.html',
+    // },
     action: {
         default_title: 'amigo',
     },

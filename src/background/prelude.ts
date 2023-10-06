@@ -29,6 +29,18 @@ const prepareCrypto = async () => {
         })
 }
 
+const prepareSidePanel = (): Promise<void> => {
+    logger.verbose('[panel] setting behavior')
+    return chrome.sidePanel.setPanelBehavior({openPanelOnActionClick: true})
+        .then(() => {
+            logger.info('[panel] behavior set')
+        })
+        .catch(err => {
+            logger.error(`[panel] ${err}`)
+        })
+}
+
 export {
-    prepareCrypto
+    prepareCrypto,
+    prepareSidePanel
 }
